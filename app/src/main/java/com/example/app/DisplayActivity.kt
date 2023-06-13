@@ -11,7 +11,6 @@ class DisplayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDisplayBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var message = intent.getStringExtra("com.example.app.INPUT")
-        binding.textView.text = message
+        binding.textView.text = "Well, that escalated quickly!"
     }
 }
