@@ -1,13 +1,14 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    namespace 'com.example.mysecondapp'
+    namespace 'com.example.app'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.mysecondapp"
+        applicationId "com.example.app"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -26,10 +27,20 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
+    }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
 
+    implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
